@@ -19,6 +19,7 @@
     background: linear-gradient($color-primary-main, $color-primary-alt);
     background-color: $color-primary-main;
     display: flex;
+    padding: 1rem 0;
     justify-content: center;
   }
 
@@ -34,6 +35,7 @@
     background-color: $color-quaternary;
     display: flex;
     justify-content: center;
+    padding: 1rem 0;
   }
 
   @media screen and (min-width: $breakpoint-md) {

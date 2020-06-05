@@ -11,4 +11,29 @@
   margin: 0 auto 2rem;
   width: 100%;
   padding: 2rem;
+
+  h1 {
+    @include h1;
+    // Turn me on to start the party
+    // -webkit-animation: glow 1s ease-in-out infinite alternate;
+    // -moz-animation: glow 1s ease-in-out infinite alternate;
+    // animation: glow 1s ease-in-out infinite alternate;
+    font-size: 24px;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px $color-secondary-main, 0 0 10px $color-secondary-main;
+    }
+
+    to {
+      text-shadow: 0 0 5px #ffffff;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    h1 {
+      font-size: 30px;
+    }
+  }
 }

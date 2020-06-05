@@ -5,7 +5,7 @@
   border-radius: $border-radius-md;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  flex-flow: column;
   padding: 3rem;
   width: 100%;
 
@@ -13,7 +13,8 @@
     background-color: $color-tertiary;
     border: 0;
     border-radius: $border-radius-md;
-    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem 2rem;
   }
 
   &__button {
@@ -22,10 +23,17 @@
     background: linear-gradient($color-secondary-main, $color-secondary-alt);
     background-color: $color-secondary-main;
     color: #fff;
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2rem;
   }
 
   @media screen and (min-width: $breakpoint-md) {
+    justify-content: space-between;
+    flex-flow: row;
 
+    &__input {
+      margin-bottom: 0;
+      margin-right: 1rem;
+      width: 100%;
+    }
   }
 }

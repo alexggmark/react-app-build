@@ -4,7 +4,7 @@ import './header.scss'
 const Header = () => {
   return (
     <header className="header">
-      Not another Todo App?!
+      <h1>Not another Todo App?!</h1>
     </header>
   )
 }
