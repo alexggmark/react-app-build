@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+.default-layout {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
 body {
   background-color: $color-background;
   color: #fff;

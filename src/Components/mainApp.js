@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../components/header'
 import UserInput from './userInput'
 import TodoList from './todoList'
 import './mainApp.scss'
@@ -6,10 +7,13 @@ import './mainApp.scss'
 export default class MainApp extends React.Component {
   render () {
     return (
-      <div className="main-app">
-        <UserInput />
-        <TodoList />
-      </div>
+      <>
+        <Header />
+        <div className="main-app">
+          <UserInput />
+          <TodoList />
+        </div>
+      </>
     )
   }
 }
