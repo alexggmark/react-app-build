@@ -23,6 +23,12 @@
     justify-content: center;
   }
 
+  &__edit-icon {
+    height: 20px;
+    margin: 0.5rem 0;
+    width: 20px;
+  }
+
   &__content {
     align-items: center;
     display: flex;
@@ -46,6 +52,7 @@
     }
 
     &__edit {
+      flex-flow: column;
       flex-grow: 1;
     }
 

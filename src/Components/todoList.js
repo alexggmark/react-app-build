@@ -14,22 +14,52 @@ const fakeData = [
   }
 ]
 
+class TodoEdit extends React.Component {
+  render () {
+    return (
+      <>
+        <img
+          alt="test"
+          className="todo-list__edit-icon"
+          onClick={() => this.props.onEdit()}
+          src={process.env.PUBLIC_URL + '/trash.svg'}
+        />
+        <img
+          alt="test"
+          className="todo-list__edit-icon"
+          onClick={() => this.props.onDelete()}
+          src={process.env.PUBLIC_URL + '/edit.svg'}
+        />
+      </>
+    )
+  }
+}
+
 class TodoItem extends React.Component {
   render () {
     return (
       <li className="todo-list__todo">
-        <div class="todo-list__edit">Edit</div>
-        <div class="todo-list__content">{this.props.todo.todo}</div>
-        <div class="todo-list__info">{this.props.todo.time}</div>
+        <div className="todo-list__edit">
+          <TodoEdit
+            onEdit={() => this.props.onEdit()}
+            onDelete={() => this.props.onDelete()}
+          />
+        </div>
+        <div className="todo-list__content">{this.props.todo.todo}</div>
+        <div className="todo-list__info">{this.props.todo.time}</div>
       </li>
     )
   }
 }
 
-const BuildList = () => {
+const BuildList = (props) => {
   const todoItems = fakeData.map((item, index) => {
     return (
-      <TodoItem todo={item} />
+      <TodoItem
+        onEdit={() => props.onEdit()}
+        onDelete={() => props.onDelete()}
+        todo={item}
+      />
     )
   })
 
@@ -37,10 +67,21 @@ const BuildList = () => {
 }
 
 export default class TodoList extends React.Component {
+  onEdit = () => {
+    console.log('Edit clicked')
+  }
+
+  onDelete = () => {
+    console.log('Delete clicked')
+  }
+
   render () {
     return (
       <div className="todo-list">
-        <BuildList />
+        <BuildList
+          onEdit={() => this.onEdit()}
+          onDelete={() => this.onDelete()}
+        />
       </div>
     )
   }
