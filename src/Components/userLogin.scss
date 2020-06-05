@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.user-login {
+  background-color: $color-primary-main;
+  background: linear-gradient($color-primary-main, $color-primary-alt);
+  border-radius: $border-radius-sm;
+  box-sizing: border-box;
+  margin: 2rem auto;
+  width: 100%;
+  padding: 3rem;
+
+  @media screen and (min-width: $breakpoint-md) {
+    border-radius: $border-radius-md;
+    width: 750px;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.main-app {
+  @include shadow-lg;
+  background-color: $color-background;
+  border-radius: $border-radius-sm;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-md) {
+    border-radius: $border-radius-md;
+    width: 750px;
+  }
+}

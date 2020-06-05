@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+.user-input {
+  background-color: $color-quinary;
+  border-radius: $border-radius-md;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  width: 100%;
+
+  &__input {
+    background-color: $color-tertiary;
+    border: 0;
+    border-radius: $border-radius-md;
+    width: 100%;
+  }
+
+  &__button {
+    border: 0;
+    border-radius: $border-radius-md;
+    background: linear-gradient($color-secondary-main, $color-secondary-alt);
+    background-color: $color-secondary-main;
+    color: #fff;
+    padding: 0.5rem 2rem;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+
+  }
+}
