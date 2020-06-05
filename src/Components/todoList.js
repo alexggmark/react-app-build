@@ -42,7 +42,7 @@ class TodoList extends React.Component {
             </div>
             <div className="todo-list__content">{item.content}</div>
             <div className="todo-list__info">
-              <Moment>
+              <Moment format="HH:mm">
                 {item.date}
               </Moment>
             </div>

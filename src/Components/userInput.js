@@ -30,7 +30,7 @@ class UserInput extends React.Component {
           className="user-input__button"
           onClick={this.handleSubmit}
         >
-          Button
+          Add Todo
         </button>
       </div>
     )

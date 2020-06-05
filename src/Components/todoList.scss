@@ -1,6 +1,7 @@
 @import '../variables.scss';
 
 .todo-list {
+  $parent: &;
   padding: 3rem;
 
   &__todo {
@@ -55,12 +56,27 @@
       &:hover {
         @include shadow-lg;
         transform: translateY(-5px);
+
+        #{$parent}__edit {
+          width: 75px;
+        }
+      }
+    }
+
+    &__edit-icon {
+      cursor: pointer;
+      transition: transform 0.1s ease;
+
+      &:hover {
+        transform: scale(1.4);
       }
     }
 
     &__edit {
       flex-flow: column;
-      width: 75px;
+      overflow: hidden;
+      transition: width 0.1s ease;
+      width: 0px;
     }
 
     &__content {
