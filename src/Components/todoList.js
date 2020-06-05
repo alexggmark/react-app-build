@@ -1,4 +1,5 @@
 import React from 'react'
+import Moment from 'react-moment'
 import './todoList.scss'
 import { connect } from 'react-redux'
 import {
@@ -40,7 +41,11 @@ class TodoList extends React.Component {
               />
             </div>
             <div className="todo-list__content">{item.content}</div>
-            <div className="todo-list__info">{item.date}</div>
+            <div className="todo-list__info">
+              <Moment>
+                {item.date}
+              </Moment>
+            </div>
           </li>
         ))}
       </div>

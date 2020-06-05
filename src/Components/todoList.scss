@@ -6,11 +6,13 @@
   &__todo {
     background-color: $color-tertiary;
     border-radius: $border-radius-sm;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
     margin: 0 0 2rem 0;
     overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
     width: 100%;
   }
 
@@ -49,11 +51,16 @@
 
     &__todo {
       flex-flow: row;
+
+      &:hover {
+        @include shadow-lg;
+        transform: translateY(-5px);
+      }
     }
 
     &__edit {
       flex-flow: column;
-      flex-grow: 1;
+      width: 75px;
     }
 
     &__content {
@@ -61,7 +68,7 @@
     }
 
     &__info {
-      flex-grow: 1;
+      width: 150px;
     }
   }
 }

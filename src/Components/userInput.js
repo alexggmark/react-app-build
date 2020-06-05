@@ -12,6 +12,7 @@ class UserInput extends React.Component {
   }
 
   handleSubmit = () => {
+    if (this.inputRef.current.value === '') { return }
     this.props.dispatch({
       type: TODO_ADD,
       payload: this.inputRef.current.value
