@@ -17,13 +17,13 @@ const initialState = {
   items: [
     {
       id: 0,
-      content: 'Pick up crystal methamphetamine and 2pts. milk',
+      content: 'This is the first item in your Todo list!',
       editing: false,
       date: 1591396521809
     },
     {
       id: 1,
-      content: 'Testing content',
+      content: 'This is the second todo in ya\' Todos',
       editing: false,
       date: 1591396521809
     }
