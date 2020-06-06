@@ -11,24 +11,21 @@ import {
 const EditingBay = (props) => {
   const inputSubmitRef = React.createRef()
 
-  if (props.itemData.editing) {
-    return (
-      <div className="todo-list__editing-bay">
-        <input
-          className="todo-list__editing-input"
-          placeholder={props.itemData.content}
-          ref={inputSubmitRef}
-        />
-        <button
-          className="todo-list__button"
-          onClick={() => props.onEditSubmit(inputSubmitRef.current.value)}
-        >
-          Update
-        </button>
-      </div>
-    )
-  }
-  return ''
+  return (
+    <div className={`todo-list__editing-bay ${props.itemData.editing ? 'active' : ''}`}>
+      <input
+        className="todo-list__editing-input"
+        placeholder={props.itemData.content}
+        ref={inputSubmitRef}
+      />
+      <button
+        className="todo-list__button"
+        onClick={() => props.onEditSubmit(inputSubmitRef.current.value)}
+      >
+        Update
+      </button>
+    </div>
+  )
 }
 
 class TodoList extends React.Component {
