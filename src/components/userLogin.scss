@@ -3,11 +3,11 @@
 .user-login {
   background-color: $color-primary-main;
   background: linear-gradient($color-primary-main, $color-primary-alt);
-  border-radius: $border-radius-sm;
+  border-radius: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   width: 100%;
   padding: 3rem;
 

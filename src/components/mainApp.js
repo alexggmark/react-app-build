@@ -10,8 +10,10 @@ export default class MainApp extends React.Component {
       <>
         <Header />
         <div className="main-app">
-          <UserInput />
-          <TodoList />
+          <div className="main-app__container">
+            <UserInput />
+            <TodoList />
+          </div>
         </div>
       </>
     )

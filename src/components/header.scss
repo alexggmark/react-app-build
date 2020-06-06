@@ -14,11 +14,16 @@
 
   h1 {
     @include h1;
-    // Turn me on to start the party
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 2s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
     font-size: 24px;
+
+    span {
+      // Turn me on to start the party
+      -webkit-animation: glow 2s ease-in-out infinite alternate;
+      -moz-animation: glow 2s ease-in-out infinite alternate;
+      animation: glow 2s ease-in-out infinite alternate;
+      font-size: 24px;
+      text-align: center;
+    }
   }
 
   @keyframes glow {
@@ -34,6 +39,10 @@
   @media screen and (min-width: $breakpoint-md) {
     h1 {
       font-size: 30px;
+
+      span {
+        font-size: 30px;
+      }
     }
   }
 }
