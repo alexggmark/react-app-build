@@ -25,6 +25,7 @@ class UserInput extends React.Component {
         <input
           className="user-input__input"
           placeholder="Enter your task here"
+          maxLength="80"
           ref={this.inputRef}
         />
         <button

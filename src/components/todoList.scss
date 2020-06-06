@@ -68,7 +68,7 @@
     z-index: -1;
 
     &.active {
-      height: 40px;
+      height: 90px;
       padding: 2rem 1rem 1rem;
       transform: translateY(-15px);
       transition: transform 0.5s ease, height 0.1s ease, padding 0.2s ease;
@@ -101,6 +101,7 @@
 
     &__todo {
       flex-flow: row;
+      flex-wrap: nowrap;
 
       &:hover {
         @include shadow-lg;
@@ -124,6 +125,7 @@
     &__edit {
       flex-flow: column;
       justify-content: center;
+      flex: 0 0 auto;
       overflow: hidden;
       padding: 1rem 0;
       transition: width 0.1s ease;
@@ -131,15 +133,21 @@
     }
 
     &__content {
-      flex-grow: 2;
+      flex: 1 1 auto;
+      justify-content: flex-start;
     }
 
     &__info {
+      flex: 0 0 auto;
       width: 150px;
     }
 
     &__editing-bay {
       flex-flow: row;
+
+      &.active {
+        height: 40px;
+      }
     }
 
     &__editing-input {
