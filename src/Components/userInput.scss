@@ -47,7 +47,7 @@
 
       &::before {
         bottom: 0;
-        background-image: linear-gradient(#F96C40, #FF9660);
+        background-image: linear-gradient($color-secondary-alt, $color-secondary-main);
         content: '';
         left: 0;
         opacity: 0;
