@@ -9,8 +9,8 @@ import {
   TODO_EDITING
 } from './constants/actions'
 
-import MainApp from '/components/mainApp'
-import UserLogin from '/components/userLogin'
+import MainApp from './components/mainApp'
+import UserLogin from './components/userLogin'
 import './index.scss'
 
 const initialState = {
