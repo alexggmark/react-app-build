@@ -96,6 +96,40 @@
     width: 150px;
   }
 
+  &__empty {
+    align-items: center;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+    background-color: $color-quinary;
+    border-radius: $border-radius-md;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    padding: 2rem;
+  }
+
+  &__empty-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(1px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(1px, 0, 0);
+    }
+  }
+
   @media screen and (min-width: $breakpoint-md) {
     justify-content: space-between;
 

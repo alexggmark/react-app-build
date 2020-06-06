@@ -28,6 +28,22 @@ const EditingBay = (props) => {
   )
 }
 
+const EmptyTodo = (props) => {
+  if (props.todos.length === 0) {
+    return (
+      <div className="todo-list__empty">
+        <img
+          alt="test"
+          className="todo-list__empty-icon"
+          src={process.env.PUBLIC_URL + '/egg.svg'}
+        />
+        <span>So lonely...</span>
+      </div>
+    )
+  }
+  return ''
+}
+
 class TodoList extends React.Component {
   onEdit = (index) => {
     this.props.dispatch({
@@ -86,6 +102,7 @@ class TodoList extends React.Component {
             />
           </li>
         ))}
+        <EmptyTodo todos={this.props.items} />
       </div>
     )
   }
