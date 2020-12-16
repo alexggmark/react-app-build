@@ -5,7 +5,7 @@ export default class UserLogin extends React.Component {
   render () {
     return (
       <div className="user-login">
-        Alex Grønmark 2020
+        Alex 2020
       </div>
     )
   }
